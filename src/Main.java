@@ -1,4 +1,3 @@
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,19 +7,13 @@ import java.util.*;
 public class Main {
     final static String FILE_PATH;
     static Random randomIntGenerator = new Random();
-    static FileReader inputTxtFile;
     static List<String> generatedWordsList = new ArrayList<>();
     static String unhiddenWord;
     static String hiddenWord;
     static List<String> enteredLetters;
 
     static {
-        try {
-            FILE_PATH = String.valueOf(Path.of("ResultAfterCleaningLessWords.txt"));
-            inputTxtFile = new FileReader(FILE_PATH);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+        FILE_PATH = String.valueOf(Path.of("ResultAfterCleaningLessWords.txt"));
     }
 
     static int getRandomInteger() throws IOException {
