@@ -92,7 +92,7 @@ public class Main {
         }
     }
 
-    static boolean menuNavigation() {
+    static boolean getMenu() {
         while (true) {
             Scanner in = new Scanner(System.in);
             String answer = in.next().toLowerCase();
@@ -154,7 +154,7 @@ public class Main {
     static void startGame() {
         greetPlayer();
         while (true) {
-            if (menuNavigation()) {
+            if (getMenu()) {
                 playCycle();
             } else {
                 break;
