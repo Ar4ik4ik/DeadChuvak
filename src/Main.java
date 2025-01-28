@@ -159,11 +159,8 @@ public class Main {
 
 
     static void printHangman(int countMistakes) {
-        System.out.println("===========================\n");
-        switch (countMistakes) {
-            case 0:
-                System.out.print(
-                        """
+        final String[] PICTURES = {
+                                   """
                                    -------------------
                                        |       |
                                        |
@@ -172,12 +169,8 @@ public class Main {
                                        |
                                        |
                                       /|\\
-                                """
-                );
-                break;
-            case 1:
-                System.out.print(
-                        """
+                                """,
+                                   """
                                    -------------------
                                        |       |
                                        |       0
@@ -186,12 +179,8 @@ public class Main {
                                        |
                                        |
                                       /|\\
-                                """
-                );
-                break;
-            case 2:
-                System.out.print(
-                        """
+                                """,
+                                   """
                                    -------------------
                                        |       |
                                        |       0
@@ -200,12 +189,8 @@ public class Main {
                                        |
                                        |
                                       /|\\
-                                """
-                );
-                break;
-            case 3:
-                System.out.print(
-                        """
+                                """,
+                                   """
                                    -------------------
                                        |       |
                                        |       0
@@ -214,12 +199,8 @@ public class Main {
                                        |
                                        |
                                       /|\\
-                                """
-                );
-                break;
-            case 4:
-                System.out.print(
-                        """
+                                """,
+                                   """
                                    -------------------
                                        |       |
                                        |       0
@@ -228,12 +209,8 @@ public class Main {
                                        |
                                        |
                                       /|\\
-                                """
-                );
-                break;
-            case 5:
-                System.out.print(
-                        """
+                                """,
+                                   """
                                    -------------------
                                        |       |
                                        |       0
@@ -242,12 +219,8 @@ public class Main {
                                        |
                                        |
                                       /|\\
-                                """
-                );
-                break;
-            case 6:
-                System.out.print(
-                        """
+                                """,
+                                   """
                                    -------------------
                                        |       |
                                        |       0
@@ -257,11 +230,10 @@ public class Main {
                                        |
                                       /|\\
                                 """
-                );
-                break;
-
-        }
-        System.out.println("===========================");
+                        };
+        System.out.println("===========================\n"
+                + PICTURES[countMistakes]
+                + "\n===========================");
     }
 }
 
